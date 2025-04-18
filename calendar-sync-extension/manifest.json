@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "UEL Calendar Sync",
+  "version": "2.2",
+  "description": "Đồng bộ thời khóa biểu từ trang MyUEL vào Google Calendar.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage",
+    "identity",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://myuel.uel.edu.vn/Modules/UIS/student/student_studyprogramhandler.aspx*",
+    "https://myuel.uel.edu.vn/Default.aspx*",
+    "http://localhost:5001/*"
+  ],
+  "oauth2": {
+    "client_id": "93670792183-u9bppkkfaq23gutrh1djc672o73vhujf.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar",
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icon.png", "48": "icon.png", "128": "icon.png" }
+  },
+  "icons": {
+    "16": "icon.png", "48": "icon.png", "128": "icon.png"
+  }
+}

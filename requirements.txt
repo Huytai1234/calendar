@@ -1,6 +1,10 @@
-Flask==2.3.3
-selenium==4.11.2
-google-auth-oauthlib==1.0.0
-google-auth-httplib2==0.1.0
-google-api-python-client==2.97.0
-gunicorn==20.1.0
+# Calendar-sync/requirements.txt
+Flask==3.0.3
+google-api-python-client==2.137.0 # Cần để gọi Calendar API
+google-auth-httplib2==0.2.0      # Hỗ trợ transport cho google-api-python-client
+google-auth>=2.0.0               # Cần cho Credentials class (có thể đã được cài cùng client)
+beautifulsoup4==4.12.3
+lxml
+requests
+gunicorn==22.0.0                 # Dùng để chạy app trên server production
+flask_cors>=4.0.0                # Đảm bảo có flask_cors (phiên bản có thể thay đổi)

@@ -1,2 +1,16 @@
-11.json
-*.pickle
+# macOS
+.DS_Store
+
+# Python Virtual Environment
+.venv/
+venv/
+*/venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE Folders (PyCharm)
+.idea/
+
+# Log files
+*.log
